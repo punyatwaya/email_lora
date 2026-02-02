@@ -156,17 +156,64 @@ video {
 <div class="page" id="p2">
     <h2>Our Memories 📸</h2>
     <div class="slideshow">
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+        <img src="./pk1.jpeg" alt="Memory 1">
+        <img src="./pk2.jpeg" alt="Memory 2">
+        <img src="./pk3.jpeg" alt="Memory 3">
+        <img src="./pk4.jpeg" alt="Memory 4">
+        <img src="./pk5.jpeg" alt="Memory 5">
+        <img src="./pk6.jpeg" alt="Memory 6">
     </div>
     <p>You are my favorite memory 💖</p>
     <button onclick="next(2)">Watch Video 🎥</button>
 </div>
 
+<style>
+.page {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Horizontal scrollable slideshow */
+.slideshow {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.slideshow::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slideshow::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+
+.slideshow img {
+    flex: 0 0 auto; /* Prevent images from shrinking */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* Hover effect for interactive feel */
+.slideshow img:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+</style>
+
 <!-- PAGE 3 -->
 <div class="page" id="p3">
     <h2>Our Video 🎥</h2>
     <video controls>
-        <source src="your-video.mp4" type="video/mp4">
+        <source src="pk1.mp4" type="video/mp4">
     </video>
     <button onclick="next(3)">Final Message 💍</button>
 </div>
